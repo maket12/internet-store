@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магаз</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-5">
+      <h1 class="text-3xl font-bold mb-5">Магаз</h1>
+
+      <div id="auth-section" class="mb-5">
+        <h2 class="text-2xl mb-3">Вход / Регистрация</h2>
+        <form id="login-form" class="mb-3">
+          <input
+            type="text"
+            id="login-username"
+            placeholder="Имя пользователя"
+            class="border p-2 mr-2"
+            required
+          />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Пароль"
+            class="border p-2 mr-2"
+            required
+          />
+          <button type="submit" class="bg-blue-500 text-white p-2">
+            Войти
+          </button>
+        </form>
+        <form id="register-form">
+          <input
+            type="text"
+            id="register-username"
+            placeholder="Имя пользователя"
+            class="border p-2 mr-2"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Пароль"
+            class="border p-2 mr-2"
+            required
+          />
+          <button type="submit" class="bg-green-500 text-white p-2">
+            Зарегаться
+          </button>
+        </form>
+        <button
+          id="logout-button"
+          class="bg-red-500 text-white p-2 mt-3 hidden"
+        >
+          Выйти
+        </button>
+      </div>
+
+      <div id="user-info" class="mb-5 hidden">
+        <h2 class="text-2xl mb-3">Инфа о пользователе</h2>
+        <p id="user-info-content"></p>
+      </div>
+
+      <h2 class="text-2xl mb-3">Товары</h2>
+      <table class="min-w-full bg-white border border-gray-300">
+        <thead>
+          <tr>
+            <th class="border px-4 py-2">ID</th>
+            <th class="border px-4 py-2">Имя</th>
+            <th class="border px-4 py-2">Описание</th>
+            <th class="border px-4 py-2">Цена</th>
+            <th class="border px-4 py-2">Доступно</th>
+            <th class="border px-4 py-2">Действия</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Product rows will be populated here -->
+        </tbody>
+      </table>
+      <div id="save-message" class="hidden text-green-500 mt-3">Сохранено!</div>
+
+      <div id="add-product-section" class="mb-5 hidden"></div>
+      <h2 class="text-2xl mb-3">Добавление товара</h2>
+      <form id="add-product-form">
+        <input
+          type="text"
+          id="product-name"
+          placeholder="Название"
+          class="border p-2 mr-2"
+          required
+        />
+        <input
+          type="text"
+          id="product-description"
+          placeholder="Описание"
+          class="border p-2 mr-2"
+          required
+        />
+        <input
+          type="text"
+          id="product-image"
+          placeholder="Картинка (URL)"
+          class="border p-2 mr-2"
+          required
+        />
+        <input
+          type="number"
+          id="product-price"
+          placeholder="Цена"
+          class="border p-2 mr-2"
+          required
+        />
+        <input
+          type="number"
+          id="product-available"
+          placeholder="Количество"
+          class="border p-2 mr-2"
+          required
+        />
+        <button type="submit" class="bg-green-500 text-white p-2">
+          Добавить
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
