@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="desktop-styles.css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="mobile-styles.css" media="screen and (max-width: 768px)">
     <title>NSU's Satisfying</title>
 </head>
 <body>
     <div class="head">
-        <div class="hamburger">
+        <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
+        </div>
+        <div class="side-menu" id="sideMenu">
+            <button class="close-button" onclick="toggleMenu()">&times;</button>
+            <nav>
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Избранное</a></li>
+                    <li><a href="#">Ваши заказы</a></li>
+                    <li><a href="#">Корзина</a></li>
+                    <li><a href="#">Мои отзывы</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="head-icons">
             <img src="files/shop-basket.svg">
@@ -49,5 +63,6 @@
             <p>Дилдо премиального качества</p>
         </div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>

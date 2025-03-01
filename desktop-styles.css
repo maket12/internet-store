@@ -1,0 +1,136 @@
+body {
+    background-image: linear-gradient(45deg, 
+        #000000 20%, 
+        rgba(216, 22, 189, 0.6) 50%, 
+        #000000 80%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Dela Gothic One', sans-serif;
+    margin: 0;
+    display: grid;
+}
+
+.head {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: grid;
+    gap: 2vh;
+    width: 6vw;
+    filter: drop-shadow(0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.5));
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out;
+}
+  
+.hamburger div {
+    width: 6vw;
+    height: 2vh;
+    background-color: white;
+    border-radius: 0.3vw;
+}
+
+.hamburger:hover {
+    transform: scale(1.1) translateY(-1vh);
+}   
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+    padding: 2vw;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.side-menu.menu-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.close-button {
+    font-size: 7vw;
+    color: white;
+    background: none;
+    
+    border: none;
+}
+
+.side-menu nav {
+    padding: 0 4vw;
+}
+
+.side-menu nav li {
+    font-size: 3vw;
+    color: white;
+}
+
+.head-icons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5vw;
+    filter: invert(1) drop-shadow(0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.5));
+}
+
+.head-icons img {
+    width: 6vw;
+    height: 6vw;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background 0.3s ease-out;
+}
+
+.head-icons img:hover {
+    transform: scale(1.2) translateY(-1vh);
+}
+
+.title, .what-seen-title {
+    font-size: 4vw;
+    color: white;
+    text-align: left;
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.1));
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    padding: 3vh;
+}
+
+.good-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    filter: drop-shadow(0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.3));
+    font-size: 2.75vh;
+}
+
+.good-card img {
+    width: 20vw;
+    height: auto;
+    border-radius: 1vw;
+    filter: blur(2vw);
+    transition: filter 0.3s ease-in-out;
+}
+
+.good-card img:hover {
+    filter: blur(0);
+}
